@@ -1,16 +1,16 @@
-App.router.usuario = App.router.usuario || {}
+App.router.user = App.router.user || {}
 
-App.router.usuario = Backbone.Router.extend({
+App.router.user = Backbone.Router.extend({
 
     routes:{
-        "":"usuario"
+        "":"user"
     },
 
     initialize:function () {
-        console.log('App.router.usuario Initialized');
+        console.log('App.router.user Initialized');
     },
 
-    usuario:function () {
-        $('#content').html( new App.view.usuario.list({model: new App.model.usuario()}).render().el);
+    user:function () {
+        $('#content').html( new App.view.user.list({model: new App.model.user()}).render().el);
     }
 });

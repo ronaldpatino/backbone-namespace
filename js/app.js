@@ -7,9 +7,9 @@ window.App = {
 
     init: function() {
         console.log('window.App Initialized')
-        App.util.templates.loadTemplates(['usuario/list'],
+        App.util.templates.loadTemplates(['user/list'],
             function () {
-                new App.router.usuario();
+                new App.router.user();
                 Backbone.history.start();
             });
     }
