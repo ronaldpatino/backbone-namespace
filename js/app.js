@@ -1,7 +1,16 @@
-/**
- * Created by JetBrains WebStorm.
- * User: ba01000660
- * Date: 16/03/12
- * Time: 11:07 AM
- * To change this template use File | Settings | File Templates.
- */
+window.App = {
+    model:  {},
+    view:   {},
+    collection: {},
+    router:  {},
+    util: {},
+
+    init: function() {
+        console.log('window.App Initialized')
+        App.util.templates.loadTemplates(['usuario/list'],
+            function () {
+                new App.router.usuario();
+                Backbone.history.start();
+            });
+    }
+}

@@ -3,8 +3,27 @@
 <html>
 <head>
     <title></title>
+
+    <script type="text/javascript" src="js/lib/head.js"></script>
+
+    <script type="text/javascript" >
+        head.js(
+                'js/lib/jquery.js',
+                'js/lib/underscore.js',
+                'js/lib/backbone.js',
+                'js/app.js',
+                'js/util.js',
+                'js/router.js',
+                'js/models/usuario/usuario_model.js',
+                'js/views/usuario/list_view.js',
+
+            function() {
+                 App.init();
+            });
+    </script>
+
 </head>
 <body>
-
+    <div id="content"></div>
 </body>
 </html>
