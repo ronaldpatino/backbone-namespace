@@ -12,6 +12,10 @@ App.view.user.user = Backbone.View.extend({
     render:function () {
         $(this.el).html(this.template(this.model.toJSON()));
         return this;
+    },
+
+    events: {
+
     }
 });
 
