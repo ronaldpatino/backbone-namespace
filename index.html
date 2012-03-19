@@ -1,32 +1,94 @@
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title></title>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="text/javascript" src="js/lib/head.js"></script>
 
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <script type="text/javascript" src="app/lib/head.js"></script>
     <script type="text/javascript" >
         head.js(
-                'js/lib/jquery.js',
-                'js/lib/underscore.js',
-                'js/lib/backbone.js',
-                'js/lib/backbone.localstorage.js',
-                'js/app.js',
-                'js/util.js',
-                'js/router.js',
-                'js/models/user/user_model.js',
-                'js/collections/user/user_collection.js',
-                'js/views/user/user_view.js',
-                'js/views/user/list_view.js',
+                'app/lib/jquery.js',
+                'assets/js/bootstrap-transition.js',
+                'assets/js/bootstrap-alert.js',
+                'assets/js/bootstrap-modal.js',
+                'assets/js/bootstrap-dropdown.js',
+                'assets/js/bootstrap-scrollspy.js',
+                'assets/js/bootstrap-tab.js',
+                'assets/js/bootstrap-tooltip.js',
+                'assets/js/bootstrap-popover.js',
+                'assets/js/bootstrap-button.js',
+                'assets/js/bootstrap-collapse.js',
+                'assets/js/bootstrap-carousel.js',
+                'assets/js/bootstrap-typeahead.js',
+                'app/lib/underscore.js',
+                'app/lib/backbone.js',
+                'app/lib/backbone.localstorage.js',
+                'app/app.js',
+                'app/util.js',
+                'app/router.js',
+                'app/models/user/user_model.js',
+                'app/collections/user/user_collection.js',
+                'app/views/user/user_view.js',
+                'app/views/user/list_view.js',
 
-            function() {
-                 App.init();
-            });
+                function() {
+                    App.init();
+                });
     </script>
-
 </head>
+
 <body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">Backbonejs Namespaces</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
     <div id="content"></div>
+</div> <!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
 </body>
 </html>
