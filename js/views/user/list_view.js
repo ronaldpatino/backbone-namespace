@@ -2,7 +2,7 @@ App.view.user = App.view.user || {}
 
 App.view.user.list = Backbone.View.extend({
 
-        tagName: 'div',
+        tagName: 'ul',
 
         initialize: function(options) {
             console.log('App.view.user.list Initialized');
@@ -10,7 +10,9 @@ App.view.user.list = Backbone.View.extend({
         },
 
         render:function () {
-            $(this.el).html(this.template(this.model.toJSON()));
+            _.each(this.model.models, function (usuario) {
+                $(this.el).append(new App.view.user.user({model:usuario}).render().el);
+            }, this);
             return this;
         }
     });

@@ -11,6 +11,11 @@ App.router.user = Backbone.Router.extend({
     },
 
     user:function () {
-        $('#content').html( new App.view.user.list({model: new App.model.user()}).render().el);
+        var userCollection = new App.collection.users();
+        userCollection.create(new App.model.user({name:'Juan', lastName: 'Perez'}));
+        userCollection.create(new App.model.user({name:'Pedro', lastName: 'Perez'}));
+        userCollection.create(new App.model.user({name:'Abadala', lastName: 'Perez'}));
+
+        $('#content').html( new App.view.user.list({model: userCollection}).render().el);
     }
 });
