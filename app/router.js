@@ -3,14 +3,15 @@ App.router.user = App.router.user || {}
 App.router.user = Backbone.Router.extend({
 
     routes:{
-        "":"user"
+        "/show/:id": "show",
+        "*actions":"list"
     },
 
     initialize:function () {
         console.log('App.router.user Initialized');
     },
 
-    user:function () {
+    list:function () {
         var userCollection = new App.collection.users();
         userCollection.create(new App.model.user({name:'Juan', lastName: 'Perez'}));
         userCollection.create(new App.model.user({name:'Pedro', lastName: 'Perez'}));
