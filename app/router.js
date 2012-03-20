@@ -3,28 +3,41 @@ App.router.user = App.router.user || {}
 App.router.user = Backbone.Router.extend({
 
     routes:{
-        "/show/:id": "show",
-        "*actions":"list"
+        'about':       'about',
+        'show/:id':    'show',
+        '*actions':     'list'
     },
 
     initialize:function () {
         console.log('App.router.user Initialized');
+        localStorage.clear();
         App.userCollection = new App.collection.users();
-        App.userCollection.localStorage.create(new App.model.user({id: 1, name:'Juan', lastName: 'Perez'}));
-        App.userCollection.localStorage.create(new App.model.user({id: 2, name:'Pedro', lastName: 'Perez'}));
-        App.userCollection.localStorage.create(new App.model.user({id: 3, name:'Abadala', lastName: 'Perez'}));
 
+        App.userCollection.localStorage.create(new App.model.user({uid: 1, name:'Cliff', lastName: 'Burton'}));
+        App.userCollection.localStorage.create(new App.model.user({uid: 2, name:'Steve', lastName: 'Harris'}));
+        App.userCollection.localStorage.create(new App.model.user({uid: 3, name:'Alejandro', lastName: 'Blanco'}));
 
     },
 
     list:function () {
-
-        console.log(App.userCollection.localStorage.findAll())
         $('#content').html( new App.view.user.list({model: App.userCollection.localStorage.findAll()}).render().el);
     },
 
     show:function (id) {
         var user = App.userCollection.localStorage.find(new App.model.user({id: id}));
-        $('#content').html(new App.view.user.show({model:user}).render().el);
+        if (user)
+        {
+            $('#content').html(new App.view.user.show({model:user}).render().el);
+        }
+        else
+        {
+            var model = {error_message: 'User not found'};
+            $('#content').html(new App.view.message.error({model:model}).render().el);
+        }
+    },
+
+    about:function () {
+        console.log('ABOUT')
+        $('#content').html('About');
     }
 });

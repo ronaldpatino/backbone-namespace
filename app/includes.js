@@ -23,6 +23,7 @@ head.js(
 'app/views/user/user_view.js',
 'app/views/user/list_view.js',
 'app/views/user/show_view.js',
+'app/views/message/error_view.js',
 function() {
     App.init();
 });
