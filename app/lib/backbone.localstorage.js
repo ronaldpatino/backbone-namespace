@@ -31,12 +31,14 @@
 
         // Save the current state of the **Store** to *localStorage*.
         save: function() {
+            console.log('Backbone.LocalStorage: saving model: '+this.name);
             this.localStorage().setItem(this.name, this.records.join(","));
         },
 
         // Add a model, giving it a (hopefully)-unique GUID, if it doesn't already
         // have an id of it's own.
         create: function(model) {
+            console.log('Backbone.LocalStorage: creating model: '+this.name);
             if (!model.id) model.id = model.attributes[model.idAttribute] = guid();
             this.localStorage().setItem(this.name+"-"+model.id, JSON.stringify(model));
             this.records.push(model.id.toString());
@@ -53,11 +55,13 @@
 
         // Retrieve a model from `this.data` by id.
         find: function(model) {
+            console.log('Backbone.LocalStorage: finding model');
             return JSON.parse(this.localStorage().getItem(this.name+"-"+model.id));
         },
 
         // Return the array of all models currently in storage.
         findAll: function() {
+            console.log('Backbone.LocalStorage: finding all models');
             return _(this.records).chain()
                 .map(function(id){return JSON.parse(this.localStorage().getItem(this.name+"-"+id));}, this)
                 .compact()
@@ -108,7 +112,7 @@
         }
     };
 
-// Override 'Backbone.sync' to default to localSync, 
+// Override 'Backbone.sync' to default to localSync,
 // the original 'Backbone.sync' is still available in 'Backbone.ajaxSync'
     Backbone.ajaxSync = Backbone.sync;
     Backbone.sync = Backbone.LocalStorage.sync;

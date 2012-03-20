@@ -10,7 +10,7 @@ App.view.user.list = Backbone.View.extend({
         },
 
         render:function () {
-            _.each(this.model.models, function (usuario) {
+            _.each(this.model, function (usuario) {
                 $(this.el).append(new App.view.user.user({model:usuario}).render().el);
             }, this);
             return this;

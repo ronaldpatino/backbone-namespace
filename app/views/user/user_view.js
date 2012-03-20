@@ -10,17 +10,14 @@ App.view.user.user = Backbone.View.extend({
     },
 
     events: {
-        "click :li": 'alerta'
+
     },
 
     render: function () {
-        $(this.el).html(this.template(this.model.toJSON()));
+        $(this.el).html(this.template(this.model));
         return this;
-    },
-
-    alerta: function () {
-        console.log('alerta');
     }
+
 });
 
 

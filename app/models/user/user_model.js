@@ -3,6 +3,7 @@ App.model.user = App.model.user || {}
 App.model.user = Backbone.Model.extend({
 
     defaults: {
+        'id':0,
         'name' : 'Ronald',
         'lastName': 'Patino'
     },

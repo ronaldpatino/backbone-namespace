@@ -5,6 +5,7 @@ window.App = {
     router:  {},
     util: {},
     data: {},
+    userCollection: null,
 
     init: function() {
         console.log('window.App Initialized')
