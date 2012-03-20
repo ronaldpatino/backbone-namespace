@@ -10,17 +10,18 @@ App.router.user = Backbone.Router.extend({
 
     initialize:function () {
         console.log('App.router.user Initialized');
-        localStorage.clear();
-        App.userCollection = new App.collection.users();
 
-        App.userCollection.localStorage.create(new App.model.user({uid: 1, name:'Cliff', lastName: 'Burton'}));
-        App.userCollection.localStorage.create(new App.model.user({uid: 2, name:'Steve', lastName: 'Harris'}));
-        App.userCollection.localStorage.create(new App.model.user({uid: 3, name:'Alejandro', lastName: 'Blanco'}));
+        App.userCollection = new App.collection.users();
+        localStorage.clear();
+        App.userCollection.create(new App.model.user({uid: 1, name:'Cliff', lastName: 'Burton'}));
+        App.userCollection.create(new App.model.user({uid: 2, name:'Steve', lastName: 'Harris'}));
+        App.userCollection.create(new App.model.user({uid: 3, name:'Alejandro', lastName: 'Blanco'}));
+
 
     },
 
     list:function () {
-        $('#content').html( new App.view.user.list({model: App.userCollection.localStorage.findAll()}).render().el);
+        $('#content').html( new App.view.user.list({model: App.userCollection.findAll()}).render().el);
     },
 
     show:function (id) {

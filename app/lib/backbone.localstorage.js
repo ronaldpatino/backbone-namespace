@@ -31,14 +31,14 @@
 
         // Save the current state of the **Store** to *localStorage*.
         save: function() {
-            console.log('Backbone.LocalStorage: saving model: '+this.name);
+            console.log('Backbone.LocalStorage: saving model: ' + this.name);
             this.localStorage().setItem(this.name, this.records.join(","));
         },
 
         // Add a model, giving it a (hopefully)-unique GUID, if it doesn't already
         // have an id of it's own.
         create: function(model) {
-            console.log('Backbone.LocalStorage: creating model: '+this.name);
+            console.log('Backbone.LocalStorage: creating model: ' + this.name);
             if (!model.id) model.id = model.attributes[model.idAttribute] = guid();
             this.localStorage().setItem(this.name+"-"+model.id, JSON.stringify(model));
             this.records.push(model.id.toString());
@@ -48,6 +48,7 @@
 
         // Update a model by replacing its copy in `this.data`.
         update: function(model) {
+            console.log('Backbone.LocalStorage: updating model: ' + this.name);
             this.localStorage().setItem(this.name+"-"+model.id, JSON.stringify(model));
             if (!_.include(this.records, model.id.toString())) this.records.push(model.id.toString()); this.save();
             return model;
@@ -55,7 +56,7 @@
 
         // Retrieve a model from `this.data` by id.
         find: function(model) {
-            console.log('Backbone.LocalStorage: finding model');
+            console.log('Backbone.LocalStorage: finding model: '  + this.name);
             return JSON.parse(this.localStorage().getItem(this.name+"-"+model.id));
         },
 
@@ -70,6 +71,7 @@
 
         // Delete a model from `this.data`, returning it.
         destroy: function(model) {
+            console.log('Backbone.LocalStorage: destroying model: '  + this.name);
             this.localStorage().removeItem(this.name+"-"+model.id);
             this.records = _.reject(this.records, function(record_id){return record_id == model.id.toString();});
             this.save();
