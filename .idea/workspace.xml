@@ -76,10 +76,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error_view.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="error_view.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/message/error_view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="58" selection-start="187" selection-end="187" vertical-scroll-proportion="0.1342812">
+            <state line="5" column="58" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="78" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,15 +98,6 @@
         <entry file="file://$PROJECT_DIR$/app/tpl/templates.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="18" selection-start="35" selection-end="44" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.jst" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/tpl/user/user.jst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -130,7 +130,6 @@
         <option value="$PROJECT_DIR$/app/collections/user/user_collection.js" />
         <option value="$PROJECT_DIR$/app/lib/backbone.localstorage.js" />
         <option value="$PROJECT_DIR$/app/router.js" />
-        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/app/tpl/jst/comp.js" />
         <option value="$PROJECT_DIR$/app/tpl/node_modules/universal-jst/package.json" />
         <option value="$PROJECT_DIR$/app/tpl/node_modules/universal-jst/universal-jst.js" />
@@ -143,6 +142,7 @@
         <option value="$PROJECT_DIR$/app/views/user/user_view.js" />
         <option value="$PROJECT_DIR$/app/views/user/show_view.js" />
         <option value="$PROJECT_DIR$/app/views/message/error_view.js" />
+        <option value="$PROJECT_DIR$/README" />
       </list>
     </option>
   </component>
@@ -482,11 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/user/user.jst">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -552,7 +547,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/message/error_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="58" selection-start="187" selection-end="187" vertical-scroll-proportion="0.1342812">
+        <state line="5" column="58" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="78" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
