@@ -18,12 +18,14 @@ head.js(
 'app/app.js',
 'app/util.js',
 'app/router.js',
+'app/tpl/templates.js',
 'app/models/user/user_model.js',
 'app/collections/user/user_collection.js',
 'app/views/user/user_view.js',
 'app/views/user/list_view.js',
 'app/views/user/show_view.js',
 'app/views/message/error_view.js',
+
 function() {
     App.init();
 });
