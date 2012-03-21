@@ -4,7 +4,7 @@ App.view.message.error = Backbone.View.extend({
 
     initialize: function (options) {
         console.log('App.view.message.error Initialized');
-        this.template = _.template(App.util.templates.get('message/error'));
+        this.template = App.JST['message\error']
     },
 
     events: {
