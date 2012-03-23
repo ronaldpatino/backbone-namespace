@@ -14,26 +14,27 @@
 
 <body>
 
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="#">Backbonejs Namespaces</a>
-            <div class="nav-collapse">
-                <ul class="nav">
+<div data-role="page">
 
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
+    <div data-role="header">
+        <h1>Backbonejs JQM</h1>
+    </div><!-- /header -->
+
+    <div data-role="navbar" data-iconpos="bottom">
+        <ul>
+            <li><a href="#" class="ui-btn-active"  data-icon="home" >Home</a></li>
+            <li><a href="#about" data-icon="info">About</a></li>
+            <li><a href="#" data-icon="home" data-icon="check">Contact</a></li>
+
+        </ul>
+    </div><!-- /navbar -->
+
+    <div data-role="content">
+        <div id="content"></div>
+    </div><!-- /content -->
 
 </div>
 
-<div class="container">
-    <div id="content"></div>
-</div> <!-- /container -->
 
 </body>
 </html>
