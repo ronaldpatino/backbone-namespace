@@ -45,6 +45,7 @@ App.router.user = Backbone.Router.extend({
     changePage:function (page) {
         $(page.el).attr('data-role', 'page');
         page.render();
+
         $('body').append($(page.el));
         $.mobile.changePage($(page.el), {changeHash:false});
     }
