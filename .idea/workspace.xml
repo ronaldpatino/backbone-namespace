@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="list_view.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="list_view.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/user/list_view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="31" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
+            <state line="14" column="45" selection-start="403" selection-end="403" vertical-scroll-proportion="0.38387096">
               <folding />
             </state>
           </provider>
@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="includes.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="includes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/includes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="7" selection-start="647" selection-end="647" vertical-scroll-proportion="0.61769354">
+            <state line="22" column="4" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,9 +95,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/tpl/user/list.jst" />
         <option value="$PROJECT_DIR$/app/tpl/templates.js" />
-        <option value="$PROJECT_DIR$/app/views/user/list_view.js" />
         <option value="$PROJECT_DIR$/app/router.js" />
         <option value="$PROJECT_DIR$/app/includes.js" />
+        <option value="$PROJECT_DIR$/app/views/user/list_view.js" />
       </list>
     </option>
   </component>
@@ -508,23 +508,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user/list_view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="31" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/user/show_view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="50" selection-start="245" selection-end="245" vertical-scroll-proportion="0.24170616">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tpl/user/list.jst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="64" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -545,7 +531,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/includes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="7" selection-start="647" selection-end="647" vertical-scroll-proportion="0.61769354">
+        <state line="22" column="4" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/user/list.jst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="64" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/user/list_view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="45" selection-start="403" selection-end="403" vertical-scroll-proportion="0.38387096">
           <folding />
         </state>
       </provider>
