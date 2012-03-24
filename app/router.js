@@ -17,11 +17,11 @@ App.router.user = Backbone.Router.extend({
         App.userCollection.create(new App.model.user({uid: 2, name:'Steve', lastName: 'Harris'}));
         App.userCollection.create(new App.model.user({uid: 3, name:'Alejandro', lastName: 'Blanco'}));
 
-
     },
 
     list:function () {
-        this.changePage( new App.view.user.list({model: App.userCollection.findAll()}));
+        $('#content').html( new App.view.user.list({model: App.userCollection.findAll()}).render().el);
+        $('#userapp div[data-role=header]').trigger('refresh');
     },
 
     show:function (id) {
@@ -40,13 +40,5 @@ App.router.user = Backbone.Router.extend({
     about:function () {
         console.log('ABOUT')
         $('#content').html('About');
-    },
-
-    changePage:function (page) {
-        $(page.el).attr('data-role', 'page');
-        page.render();
-
-        $('body').append($(page.el));
-        $.mobile.changePage($(page.el), {changeHash:false});
     }
 });

@@ -16,14 +16,26 @@ head.js(
 'app/views/message/error_view.js',
 
 function() {
-    $.mobile.ajaxEnabled = false;
-    $.mobile.linkBindingEnabled = false;
-    $.mobile.hashListeningEnabled = false;
-    $.mobile.pushStateEnabled = false;
 
-    $('div[data-role="page"]').live('pagehide', function (event, ui) {
-        $(event.currentTarget).remove();
+    $.extend($.mobile, {
+
+        // Don't allow jQM to handle link clicks and form submissions through Ajax
+        ajaxEnabled: false,
+
+        // Prevent jQuery Mobile from handling hash changes so we can handle them in Backbone
+        hashListeningEnabled: false,
+
+        // Don't use history.replaceState at this time for browser compatibility reasons.
+        pushStateEnabled: false,
+
+        // Prevent all anchor click handling including the addition of active
+        // button state and alternate link bluring.  This is we can allow Backbone
+        // to handle these requests.
+        linkBindingEnabled:false
     });
+
+    $.mobile.changePage.defaults.changeHash = false;
+
     App.init();
 });
 
