@@ -15,7 +15,7 @@ App.view.user.list = Backbone.View.extend({
             }, this);
 
             $(this.el).attr('data-role','listview');
-            $(this.el).attr('data-theme','g');
+            $(this.el).attr('data-theme','c');
             $(this.el).attr('class','ui-listview');
             return this;
         }
