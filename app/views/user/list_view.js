@@ -17,7 +17,7 @@ App.view.user.list = Backbone.View.extend({
                 $(this.el).append(new App.view.user.user({model:user}).render().el);
             },this);
 
-            App.container.html($(this.el));
+            App.contentHolder.html($(this.el));
             return this;
         }
     });

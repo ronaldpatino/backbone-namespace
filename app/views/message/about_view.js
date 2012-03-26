@@ -14,7 +14,7 @@ App.view.message.about = Backbone.View.extend({
     render: function () {
         $(this.el).empty();
         $(this.el).append(this.template(this.model));
-        App.container.html($(this.el));
+        App.contentHolder.html($(this.el));
         return this;
     }
 
