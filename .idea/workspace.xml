@@ -25,7 +25,7 @@
       <file leaf-file-name="list_view.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/user/list_view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="49" selection-start="722" selection-end="722" vertical-scroll-proportion="0.6143617">
+            <state line="22" column="0" selection-start="629" selection-end="723" vertical-scroll-proportion="0.64361703">
               <folding />
             </state>
           </provider>
@@ -601,7 +601,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/user/list_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="49" selection-start="722" selection-end="722" vertical-scroll-proportion="0.6143617">
+        <state line="22" column="0" selection-start="629" selection-end="723" vertical-scroll-proportion="0.64361703">
           <folding />
         </state>
       </provider>
