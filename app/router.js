@@ -10,7 +10,6 @@ App.router.user = Backbone.Router.extend({
 
     initialize:function () {
         console.log('App.router.user Initialized');
-        console.log(App.menuContainter);
         App.userCollection = new App.collection.users();
         localStorage.clear();
         App.userCollection.create(new App.model.user({uid: 1, name:'Cliff', lastName: 'Burton'}));
