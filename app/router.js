@@ -20,8 +20,7 @@ App.router.user = Backbone.Router.extend({
     },
 
     list:function () {
-        var vista = new App.view.user.list({model: App.userCollection.findAll()});
-        vista.render();
+        this.changePage(new App.view.user.list({model: App.userCollection.findAll()}));
 
     },
 
@@ -29,22 +28,24 @@ App.router.user = Backbone.Router.extend({
         var user = App.userCollection.localStorage.find(new App.model.user({id: id}));
         if (user)
         {
-            var vista = new App.view.user.show({model:user});
-            vista.render();
+            this.changePage(new App.view.user.show({model:user}));
         }
         else
         {
             var model = {error_message: 'User not found'};
-            var error = new App.view.message.error({model:model});
-            error.render();
+            this.changePage(new App.view.message.error({model:model}));
 
         }
     },
 
     about:function () {
         var model = {about_message: 'About this app'};
-        var about = new App.view.message.about({model:model});
-        about.render();
+        this.changePage(new App.view.message.about({model:model}));
 
+    },
+
+    changePage: function (page){
+        page.render();
+        App.container.html($(page.el)).trigger("pagecreate").trigger("refresh");
     }
 });
