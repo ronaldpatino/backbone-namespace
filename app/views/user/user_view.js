@@ -6,7 +6,7 @@ App.view.user.user = Backbone.View.extend({
 
     initialize: function (options) {
         console.log('App.view.user.user Initialized');
-        this.template = App.JST['user\user'];
+        this.template = App.JST['user_user'];
 
     },
 
