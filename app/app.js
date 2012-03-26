@@ -7,6 +7,7 @@ window.App = {
     data: {},
     JST:{},
     userCollection: null,
+    container : $('#userapp').find(":jqmData(role='content')"),
 
     init: function() {
         console.log('window.App Initialized')

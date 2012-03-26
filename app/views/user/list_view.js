@@ -2,7 +2,9 @@ App.view.user = App.view.user || {}
 
 App.view.user.list = Backbone.View.extend({
 
-       tagName: 'ul',
+        tagName: 'ul',
+        id: 'activities-list',
+        attributes:{'data-role': 'listview','data-theme':'c' ,'class':'ui-listview'},
 
         initialize: function(options) {
             console.log('App.view.user.list Initialized');
@@ -10,13 +12,14 @@ App.view.user.list = Backbone.View.extend({
 
         render:function () {
             // Add each user to the list
+            var listView = $(this.el);
+            $(this.el).empty();
             _.each(this.model, function (user) {
-                $(this.el).append(new App.view.user.user({model:user}).render().el);
-            }, this);
+                listView.append(new App.view.user.user({model:user}).render().el);
+            },this);
 
-            $(this.el).attr('data-role','listview');
-            $(this.el).attr('data-theme','c');
-            $(this.el).attr('class','ui-listview');
+            App.container.html($(this.el));
+            $('#userapp').page('destroy').page();
             return this;
         }
     });

@@ -1,12 +1,17 @@
 App.JST = App.JST || {};
 
-App.JST['message\error'] = function anonymous(obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="alert alert-error">\n\n    <a href="#" class="close">×</a>\n    <p><strong>Error!</strong>  ',error_message,'.</p>\n</div>');}return __p.join('');
+App.JST['message\about'] = function anonymous(obj,_) {
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<p>',about_message,'</p>\n');}return __p.join('');
 };
 
 
 App.JST['user\list'] = function anonymous(obj,_) {
 var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<ul data-role="listview" data-theme="g" id=\'list_view\'></ul>');}return __p.join('');
+};
+
+
+App.JST['message\error'] = function anonymous(obj,_) {
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="alert alert-error">\n\n    <a href="#" class="close">×</a>\n    <p><strong>Error!</strong>  ',error_message,'.</p>\n</div>');}return __p.join('');
 };
 
 
@@ -18,3 +23,5 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 App.JST['user\user'] = function anonymous(obj,_) {
 var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<a href="#show/',id,'"> ',name,' ',lastName,'</a>\n');}return __p.join('');
 };
+
+

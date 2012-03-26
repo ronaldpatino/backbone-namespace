@@ -14,6 +14,7 @@ head.js(
 'app/views/user/list_view.js',
 'app/views/user/show_view.js',
 'app/views/message/error_view.js',
+'app/views/message/about_view.js',
 
 function() {
 
