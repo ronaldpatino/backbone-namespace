@@ -10,7 +10,7 @@ App.router.user = Backbone.Router.extend({
 
     initialize:function () {
         console.log('App.router.user Initialized');
-
+        console.log(App.menuContainter);
         App.userCollection = new App.collection.users();
         localStorage.clear();
         App.userCollection.create(new App.model.user({uid: 1, name:'Cliff', lastName: 'Burton'}));
@@ -46,6 +46,8 @@ App.router.user = Backbone.Router.extend({
 
     changePage: function (page){
         page.render();
-        App.container.html($(page.el)).trigger("pagecreate").trigger("refresh");
+        if (App.container.page() ) {
+            App.container.page('destroy').page();
+        }
     }
 });
